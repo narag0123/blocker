@@ -16,6 +16,6 @@ public class GateController {
 
     @PostMapping("/cmd")
     public Map<String, Object> cmd(@RequestBody GateCmdRequest req) {
-        return gateService.handleMobileOn(req);
+        return gateService.processMobileCommand(req);
     }
 }

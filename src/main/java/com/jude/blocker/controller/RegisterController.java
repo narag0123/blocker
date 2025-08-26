@@ -16,10 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/whitelist")
 @RequiredArgsConstructor
-@CrossOrigin(
-    origins = "http://localhost:3000",
-    allowCredentials = "false"
-)
 public class RegisterController {
     private final WhiteListRepository whitelistRepository;
 
