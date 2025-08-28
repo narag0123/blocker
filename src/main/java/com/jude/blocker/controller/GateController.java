@@ -16,6 +16,9 @@ public class GateController {
 
     @PostMapping("/cmd")
     public Map<String, Object> cmd(@RequestBody GateCmdRequest req) {
-        return gateService.processMobileCommand(req);
+        System.out.println("[CTRL] /gate/cmd action=" + req.getAction());
+        Map<String, Object> resp = gateService.processMobileCommand(req);
+        System.out.println("[CTRL] /gate/cmd resp=" + resp);
+        return resp;
     }
 }
